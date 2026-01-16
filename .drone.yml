@@ -6,6 +6,7 @@ steps:
   - name: install
     image: python:3.13
     commands:
+      - echo "My secret is: $MY_TEST_KEY"
       - pip install -r requirements.txt || true
 
   - name: test

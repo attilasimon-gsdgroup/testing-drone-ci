@@ -9,7 +9,7 @@ steps:
       - pip install -r requirements.txt || true
 
   - name: test
-    image: python:3.11
+    image: python:3.13
     commands:
       - python -m pytest -q || python test_app.py
 

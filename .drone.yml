@@ -5,12 +5,14 @@ name: default
 steps:
   - name: install
     image: python:3.13
-    commands:
-      - echo "My secret is: $MY_TEST_KEY"
-      - pip install -r requirements.txt || true
     environment:
       MY_TEST_KEY:
-        from_secret: MY_TEST_KEY
+        from_secret: my_test_key
+    commands:
+      - echo "My secret is:"
+      - echo $MY_TEST_KEY
+      - echo "For security reasons, you will see asteriks '*******' instead the value under the echo command."
+      - pip install -r requirements.txt || true
 
   - name: test
     image: python:3.13

@@ -29,6 +29,7 @@ steps:
       message: "Build {{build.number}} on {{repo.name}} is {{build.status}}! Link: {{build.link}}"
     when:
       status: [ success, failure ]
+    #failure: ignore
 
 trigger:
   event:

@@ -22,8 +22,10 @@ steps:
   - name: notify-telegram
     image: appleboy/drone-telegram
     settings:
-      token: from_secret: TELEGRAM_TOKEN
-      to: from_secret: TELEGRAM_TO
+      token: 
+        from_secret: TELEGRAM_TOKEN
+      to: 
+        from_secret: TELEGRAM_TO
       message: "Build {{build.number}} on {{repo.name}} is {{build.status}}! Link: {{build.link}}"
     when:
       status: [ success, failure ]

@@ -19,6 +19,15 @@ steps:
     commands:
       - python -m pytest -q || python test_app.py
 
+  - name: notify-telegram
+    image: appleboy/drone-telegram
+    settings:
+      token: from_secret: TELEGRAM_TOKEN
+      to: from_secret: TELEGRAM_TO
+      message: "Build {{build.number}} on {{repo.name}} is {{build.status}}! Link: {{build.link}}"
+    when:
+      status: [ success, failure ]
+
 trigger:
   event:
     - push

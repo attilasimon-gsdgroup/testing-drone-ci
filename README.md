@@ -1,8 +1,8 @@
 # Drone CI Quickstart
 
-Test out Drone CI using Docker, Drone Runner and GitHub.
+Checking out Drone CI using Docker, Drone Runner, ngrok and GitHub.
 
-Start out with the official quickstart video: https://www.youtube.com/watch?v=Qf8EHRzAgHQ, and then follow some extra steps if you wish from this Readme.
+Start out with the official quickstart video: https://www.youtube.com/watch?v=Qf8EHRzAgHQ, made by [Harness](https://github.com/harness), and then follow some extra steps, if you wish, from this Readme.
 
 This repo is a small python app created only to test out this Drone CI setup.
 
